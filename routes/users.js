@@ -7,7 +7,7 @@ var router = express.Router();
 // });
 const fs = require('fs');
 const path = require('path');
-const fileHandler = require('../js/fileHandler.js');
+// const fileHandler = require('../public/js/fileHandler.js');
 
 
 router.get('/', function (req, res, next) {

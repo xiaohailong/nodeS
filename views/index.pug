@@ -1,15 +1,22 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  each item in resData
-    p #{item}
-    //- each atrr in item.obj
-    //-   p #{atrr}
-
-
-  script(src="/bundle.js")
+  .header 
+    .header-logo hailong Api
+    .header-nav
+      ul.nav-items
+        li.nav-item ApiLists
+        li.nav-item create
+  .main 
+    .list lists
+    .create create
+  //- h1= title
+  //- p Welcome to #{title}
+  //- each item in resData
+  //-   p #{item}
+  //-   //- each atrr in item.obj
+  //-   //-   p #{atrr}
+  script(src="/dist/bundle.js")
   
 
 
