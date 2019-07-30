@@ -5,17 +5,25 @@ block content
     .header-logo hailong Api
     .header-nav
       ul.nav-items
-        li.nav-item ApiLists
-        li.nav-item create
-  .main 
-    .list lists
-    .create create
+        li.nav-item(data-nav="home") home
+        li.nav-item(data-nav="apilist") ApiLists
+        li.nav-item(data-nav="create") Create
+    .header-tips
+      .tip github
+      .tip rise
+  .main
+    .home.wraper(data-nav="home") home
+    .list.wraper(data-nav="apilist") lists
+      .list #{resapi}
+    .create.wraper(data-nav="create") create
+      .jsonEditor
+        #jsoneditor(style="width: 600px;height: 400px;")
   //- h1= title
   //- p Welcome to #{title}
   //- each item in resData
   //-   p #{item}
-  //-   //- each atrr in item.obj
-  //-   //-   p #{atrr}
+    //- each atrr in item.obj
+    //-   p #{atrr}
   script(src="/dist/bundle.js")
   
 
